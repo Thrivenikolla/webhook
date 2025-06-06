@@ -9,8 +9,8 @@ pipeline {
             token: '9876543210',
             printContributedVariables: true,
             printPostContent: true,
-            regexpFilterText: '$branch == "refs/heads/main"',
-            regexpFilterExpression: 'true',
+            regexpFilterText: '$branch',
+            regexpFilterExpression: '^refs/heads/main$',
         )        
     }
 
