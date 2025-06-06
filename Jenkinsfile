@@ -25,7 +25,7 @@ pipeline {
             }
         stage('Build') {
             steps {
-                sh 'echo "Building code from branch: ${branch}"'
+                bat 'echo "Building code from branch: ${branch}"'
             }
         }
     }
