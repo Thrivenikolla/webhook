@@ -30,3 +30,5 @@ pipeline {
         }
     }
 }
+
+// This Jenkinsfile uses the Generic Webhook Trigger plugin to listen for GitHub webhook events.
