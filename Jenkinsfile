@@ -17,8 +17,10 @@ pipeline {
     stages {
         stage('Log Webhook Data') {
             steps {
-                    echo "Webhook triggered by: ${commit_author}"
-                    echo "Branch: ${branch}"
+                script {
+                    echo "Webhook triggered by: ${env.commit_author ?: 'N/A'}"
+                    echo "Branch: ${env.branch ?: 'N/A'}"
+                    }
                 }
             }
         stage('Build') {
