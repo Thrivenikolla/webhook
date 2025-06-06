@@ -6,10 +6,10 @@ pipeline {
                 [key: 'branch', value: '$.ref'],
                 [key: 'commit_author', value: '$.head_commit.author.name']
             ],
-            token: 'your-generic-webhook-token',
+            token: '9876543210',
             printContributedVariables: true,
             printPostContent: true,
-            regexFilterText: '$branch == "refs/heads/main"',
+            regexpFilterText: '$branch == "refs/heads/main"',
             regexpFilterExpression: 'true',
         )        
     }
